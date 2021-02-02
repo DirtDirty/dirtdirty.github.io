@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+<!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@qi2peng2">
+    <meta name="twitter:creator" content="@qi2peng2">-->
+    <meta name="twitter:title" content="DirTY: A Dataset for Decompiled identiﬁer re-TYping (name is just for fun)">
+    <meta name="twitter:description" content="Explore DirT">
+    <meta name="twitter:image" content="https://dirtdirty.github.io/explorer-bg.jpg">
+    <meta property="og:image" content="https://dirtdirty.github.io/explorer-bg.jpg">
+
+
+    <title>DirTY Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="css/hotpotqa.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/highlight/tomorrow-night-eighties.css">
+    
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">DirTY</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="explorer.html">Explorer</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/explorer-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Explore DirT</h1>
+          <span class="subheading">A Dataset for Decompiled identiﬁer re-TYping (name is just for fun)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+<div class="container">
+<div class="row" style="margin-bottom: 10px">
+<div class="col-lg-8 col-md-10 mx-auto">
+Here we show a random example from the DirTY dev set. Feel free to use the in-browser controls to show/hide the answer to see if you can predict them!
+</div>
+</div>
+<div class="row" style="margin-bottom: 10px">
+<div class="col-lg-8 col-md-10 mx-auto">
+<div class="form-check-inline">
+  <input class="form-check-input" type="checkbox" value="" id="show_meta" checked>
+  <label class="form-check-label" for="show_meta">
+    Show meta
+  </label>
+</div>
+<div class="form-check-inline">
+  <input class="form-check-input" type="checkbox" value="" id="show_answer">
+  <label class="form-check-label" for="show_answer">
+    Show reference
+  </label>
+</div>
+<div class="form-check-inline">
+  <input class="form-check-input" type="checkbox" value="" id="only_not_train">
+  <label class="form-check-label" for="only_not_train">
+    Only body-not-in-train
+  </label>
+</div>
+<div class="form-check-inline">
+  <input class="form-check-input" type="checkbox" value="" id="only_struct">
+  <label class="form-check-label" for="only_struct">
+    Only structs
+  </label>
+</div>
+<button type="button" class="btn btn-success" id="another_example">Show another example</button>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-8 col-md-10 mx-auto">
+<div id="data-example">
+<div class="data-paragraph" id="doc_a">
+  <div class="paragraph-title" id="var">
+  </div>
+  <div class="paragraph" id="meta">
+  </div>
+  <br/>
+  <div class="code" id="code_s">
+  </div>
+  <div class="code" id="code_t">
+  </div>
+  <div class="code" id="objdump">
+  </div>
+</div>
+<!-- <div class="data-question" id="question"></div>
+<div class="data-answer" id="answer"></div> -->
+</div>
+</div>
+</div>
+</div>
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p class="copyright text-muted">Copyright &copy; DIRTY Team, 2020-2021.</p>
+            <p class="copyright text-muted">Theme adapted from HotpotQA's <a href="https://github.com/hotpotqa/hotpotqa.github.io">fork</a> of Start Bootstrap's <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> template.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+    <script src="vendor/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+<script>
+var examples;
+
+function showCode(id, example) {
+  var paragraph = example['code_' + id];
+  $("#code_"+id).html(paragraph);
+}
+
+function showTable(example) {
+  var vars = example['var'];
+  html = '<thead class="thead-light"><tr><th class="align-middle">Variable</th><th class="align-middle">Pred Type</th><th class="align-middle">Pred Name</th><th class="align-middle">Ref Name</th><th class="align-middle">Ref Type</th></tr></thead>'
+  classes = "ref"
+  if (!$("#show_answer")[0].checked)
+    classes += " hide"
+  for (var i = 0; i < vars.length; i++) {
+    var tr = "<tr>";
+    tr += "<td><code>" + vars[i].name + "</code></td>" + "<td><code>" + vars[i].type + "</code></td>"+ "<td><code>" + vars[i].pred_name + "</code></td>" + "<td><code>" + "<span class='" + classes + "'>" + vars[i].ref_name + "</span>" + "</code></td>" + "<td><code>" + "<span class='" + classes + "'>" + vars[i].ref_type + "</span>" + "</code></td>" + "</tr>";
+    html += tr;
+  }
+  $("#var").html(html);
+}
+
+function showMeta(example) {
+  $("#meta").text("body_in_train: " + example['body_in_train'] + ",\nrepo_owner: " + example["repo_owner"] + ",\nrepo_name: " + example["repo_name"] + ",\npath_in_repo: " + example["path_in_repo"] + "\n");
+}
+
+function showDump(example) {
+  $("#objdump").text(example["objdump"]);
+}
+
+function showRandomExample() {
+  var id = Math.floor(Math.random() * examples.length);
+  var example = examples[id];
+  showTable(example);
+  showMeta(example);
+  showCode('s', example);
+  showCode('t', example);
+  showDump(example);
+  document.querySelectorAll('pre code').forEach((block) => {
+    hljs.highlightBlock(block);
+  });
+  // $('#question').html("<strong>Q:</strong> " + example['question'])
+  // $('#answer').html("<strong>A:</strong> " + example['answer'])
+}
+
+function getResultName() {
+  name = "js/results";
+  if ($("#only_struct")[0].checked)
+    name += "-struct";
+  if ($("#only_not_train")[0].checked)
+    name += "-notrain";
+  name += ".json";
+  return name
+}
+
+$(function(){
+  $.getJSON('js/results.json', function(data) {
+    examples = data;
+    showRandomExample();
+  });
+  $("#code_s").before("<div class='paragraph'><strong>Model input: </strong>Decompiled</div>").wrap("<pre><code></code></pre>")
+  $("#code_t").before("<div class='paragraph'><strong>Reference: </strong>Debug</div>").wrap("<pre><code></code></pre>").hide();
+  $("#objdump").before("<div class='paragraph'><strong>Binary: </strong>objdump</div>").wrap("<pre><code></code></pre>")
+  $("#var").wrap("<table class='table table-responsive'><tbody></tbody></table>")
+  $("#show_answer").click(function(){$("span.ref").toggleClass("hide"); $("#code_t").slideToggle(200)});
+  $("#show_meta").click(function(){$("#meta").slideToggle(200)});
+  $("#another_example").click(function(){$("#data-example").fadeOut(100, function(){showRandomExample(); $("#data-example").fadeIn(100);});})
+  refetch = function() {
+    $.getJSON(getResultName(), function(data) {
+      examples = data;
+      showRandomExample();
+    });
+  };
+  $("#only_struct").click(refetch);
+  $("#only_not_train").click(refetch);
+})
+</script>
+
+
+  </body>
+
+</html>

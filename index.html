@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@qi2peng2">
+    <meta name="twitter:creator" content="@qi2peng2">
+    <meta name="twitter:title" content="HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering">
+    <meta name="twitter:description" content="HotpotQA is a question answering dataset featuring natural, multi-hop questions, with strong supervision for supporting facts to enable more explainable question answering systems. It is collected by a team of NLP researchers at Carnegie Mellon University, Stanford University, and Université de Montréal."> -->
+    <!-- <meta name="twitter:image" content="https://hotpotqa.github.io/img/question_types.png"> -->
+    <!-- <meta property="og:image" content="https://hotpotqa.github.io/img/question_types.png"> -->
+
+    <title>DirTY Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="css/hotpotqa.css" rel="stylesheet">
+    
+<!-- <meta name="google-site-verification" content="h3zCtOJy9KzG1XWf5-3ppU1liaJ8NkpGvK_BbOOq3-4" /> -->
+<!-- <script type="application/ld+json">
+{
+  "@context":"https://schema.org/",
+  "@type":"Dataset",
+  "name":"HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+  "description":"HotpotQA is a question answering dataset featuring natural, multi-hop questions, with strong supervision for supporting facts to enable more explainable question answering systems built based on Wikipedia.",
+  "url":"https://hotpotqa.github.io/",
+  "keywords":[
+     "Question Answering",
+     "Natural Language Processing",
+     "Multi-hop Reasoning",
+     "Explainable Artificial Intelligence"
+  ],
+  "creator":{
+     "@type":"Organization",
+     "url": "https://hotpotqa.github.io/",
+     "name":"Carnegie Mellon University, Stanford University, Université de Montréal",
+     "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType": "customer service",
+        "url":"https://qipeng.me/",
+        "email":"pengqi@cs.stanford.edu"
+     }
+  },
+}
+</script> -->
+
+  </head>
+
+  <body>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">DirTY</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a> -->
+        <!-- </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="explorer.html">Explorer</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>DirTY</h1>
+          <span class="subheading">A Dataset for Decompiled identiﬁer re-TYping (name is just for fun)</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    
+<!-- Main Content -->
+<div class="container" id="main">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="list-group">
+        <div class="list-group-item"><h4>What is DirTY?</h4>
+        </div>
+        <div class="list-group-item"><h4>Getting started</h4>
+        </div>
+        <div class="list-group-item"><h4>Stay connected!</h4>
+    </div>
+  </div>
+</div>
+<div class="col-lg-8">
+  <div class="card card-outline-secondary">
+    <div class="card-header">
+      Leaderboard
+    </div>
+    <div class="card-body">
+      <!-- In the <em>distractor</em> setting, a question-answering system reads 10 paragraphs to provide an answer (Ans) to a question. They must also justify these answers with supporting facts (Sup). -->
+      <table class="table table-responsive">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col" rowspan=2></th>
+            <th scope="col" rowspan=2 class="align-middle text-center">Model</th>
+            <th scope="col" rowspan=2 class="align-middle text-center">Code</th>
+            <th scope="col" colspan=2 class='text-center'>Ans</th>
+            <th scope="col" colspan=2 class='text-center'>Sup</th>
+            <th scope="col" colspan=2 class='text-center'>Joint</th>
+          </tr>
+          <tr>
+            <th scope="col" class='text-center'>EM</th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+            <th scope="col" class='text-center'>EM</th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+            <th scope="col" class='text-center'>EM</th>
+            <th scope="col" class='text-center'>F<sub>1</sub></th>
+          </tr>
+        </thead>
+        <!-- <tbody><tr>
+            <td scope="row" class='align-middle text-center'>1<br>
+              <span class="badge badge-secondary">Sep 6, 2020</span></td>
+            <td class='align-middle text-center'>SpiderNet-large (single model)<br/>
+              <span class="affiliation">Kingsoft AI Lab</span><br/></td>
+            <td class='align-middle text-center'><div class="crossed"><i class="far fa-file text-danger"></i></div></td>
+            <td class='align-middle text-center'>70.15</td>
+            <td class='align-middle text-center'><strong>83.02</strong></td>
+            <td class='align-middle text-center'><strong>63.82</strong></td>
+            <td class='align-middle text-center'>88.85</td>
+            <td class='align-middle text-center'><strong>47.54</strong></td>
+            <td class='align-middle text-center'><strong>74.88</strong></td>
+            <td class='align-middle text-center'>52.82</td>
+          </tr></tbody> -->
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+    <hr>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <p class="copyright text-muted">Copyright &copy; DIRTY Team, 2020-2021.</p>
+            <p class="copyright text-muted">Theme adapted from HotpotQA's <a href="https://github.com/hotpotqa/hotpotqa.github.io">fork</a> of Start Bootstrap's <a href="https://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> template.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+    
+
+  </body>
+
+</html>
